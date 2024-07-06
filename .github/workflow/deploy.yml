@@ -3,7 +3,7 @@ name: Sample Secure Deployment Workflow
 on:
   push:
     branches:
-      - master
+      - main
 
 jobs:
   test:
