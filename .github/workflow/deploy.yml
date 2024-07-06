@@ -3,7 +3,7 @@ name: Sample Secure Deployment Workflow
 on:
   push:
     branches:
-      - main
+      - master
 
 jobs:
   test:
@@ -34,4 +34,4 @@ jobs:
       - name: OWASP ZAP DAST Scan
         continue-on-error: true
         run: |
-          docker run --rm -v $(pwd):/zap/wrk:rw zaproxy/zap-stable zap-baseline.py -t 'https://github.com/kenneth-stack/Csn-dast' || true
+          docker run --rm -v $(pwd):/zap/wrk:rw zaproxy/zap-stable zap-baseline.py -t 'https://github.com/kenneth-stack/Csn-dast/' || true
